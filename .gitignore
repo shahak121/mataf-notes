@@ -1,0 +1,8 @@
+# Ignore database files
+*.ibd
+*.frm
+*.myd
+*.myi
+
+# Include scripts
+!db-scripts/
