@@ -141,3 +141,4 @@ C:\Users\shaha\Documents\fun\MATAF\api\bin\Debug\net8.0\Microsoft.AspNetCore.Jso
 C:\Users\shaha\Documents\fun\MATAF\api\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\shaha\Documents\fun\MATAF\api\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\shaha\Documents\fun\MATAF\api\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\shaha\Documents\fun\MATAF\api\obj\Debug\net8.0\api.sourcelink.json

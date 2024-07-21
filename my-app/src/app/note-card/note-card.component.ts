@@ -28,6 +28,7 @@ export class NoteCardComponent {
       if (result) {
         this.noteService.updateNote(this.note.noteNo, result).subscribe({
           next: () => {
+            // Handle successful update
             console.log('Note updated successfully');
           },
           error: (error: any) => {

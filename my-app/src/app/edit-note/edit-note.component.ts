@@ -71,7 +71,7 @@ export class EditNoteComponent implements OnInit {
     return Math.ceil(timeDiff / (1000 * 3600 * 24));
   }
 
-  updateNote(): void {
+    updateNote(): void {
     console.log('updateNote - Form data:', {
       username: this.username,
       noteTitle: this.noteTitle,

@@ -7,7 +7,9 @@
     <button mat-button (click)="openEditorModeDialog()">Editor Mode</button>
     <button mat-button *ngIf="isEditorMode" (click)="closeEditorMode()">Exit Editor Mode</button>
     <button mat-button>About</button>
-    <div class="logo">Logo</div>
+    <div *ngIf="!isSidebarClosed" class="logo">
+      <img src="assets/images/fibi-logo.png" alt="Fibi Logo" class="fibi-logo">
+    </div>
   </div>
   <div class="content" [class.sidebar-closed]="isSidebarClosed">
     <router-outlet></router-outlet>
