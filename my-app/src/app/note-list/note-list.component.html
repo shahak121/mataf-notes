@@ -1,0 +1,10 @@
+<div class="note-list">
+  <app-note-card
+    *ngFor="let note of notes"
+    [note]="note"
+    [isEditorMode]="isEditorMode"
+    (edit)="openEditNoteDialog(note)"
+    (delete)="deleteNote(note)">
+  </app-note-card>
+</div>
+<button class="add-note-button" (click)="openAddNoteDialog()">Add Note</button>

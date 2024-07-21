@@ -1,0 +1,32 @@
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.user-card {
+  background-color: #f5f5dc;
+  color: #020101;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-user-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 60px;
+  height: 60px;
+  background-color: #f0e68c;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-image: url('/my-app/src/assets/images/plus-sign.png');
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+}

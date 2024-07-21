@@ -1,0 +1,12 @@
+<div class="app-container">
+    <div class="sidebar" [class.closed]="isSidebarClosed">
+      <button mat-button (click)="toggleSidebar()">&#9776;</button>
+      <button mat-button routerLink="/notes">Notes</button>
+      <button mat-button routerLink="/users">Users</button>
+      <button mat-button (click)="openEditorModeDialog()">Editor Mode</button>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

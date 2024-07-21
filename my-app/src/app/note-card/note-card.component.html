@@ -1,0 +1,14 @@
+<div class="note-card">
+  <h3>{{ note.noteTitle }}</h3>
+  <p>{{ note.noteContents }}</p>
+  <p><strong>User:</strong> {{ note.userName }}</p>
+  <p><strong>Delete At:</strong> {{ note.deletedAt | date }}</p>
+  <div *ngIf="isEditorMode">
+    <button mat-icon-button (click)="editNote()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="deleteNote()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

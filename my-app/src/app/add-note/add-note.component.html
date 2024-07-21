@@ -1,0 +1,41 @@
+<h2 class="dialog-title">Add Note</h2>
+<form (ngSubmit)="addNote()" #noteForm="ngForm">
+  <mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput id="username" [(ngModel)]="username" name="username" required #usernameInput="ngModel">
+      <mat-error *ngIf="usernameInput.invalid && usernameInput.touched">
+        Name is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput id="title" [(ngModel)]="title" name="title" required #titleInput="ngModel">
+      <mat-error *ngIf="titleInput.invalid && titleInput.touched">
+        Title is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Content</mat-label>
+      <textarea matInput id="content" [(ngModel)]="content" name="content" required #contentInput="ngModel"></textarea>
+      <mat-error *ngIf="contentInput.invalid && contentInput.touched">
+        Content is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Duration (days)</mat-label>
+      <input matInput id="duration" type="number" [(ngModel)]="duration" name="duration" required #durationInput="ngModel" min="1">
+      <mat-error *ngIf="durationInput.invalid && durationInput.touched">
+        Duration is required and must be at least 1 day.
+      </mat-error>
+    </mat-form-field>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="button" (click)="closeDialog()">Cancel</button>
+    <button mat-button type="submit" [disabled]="noteForm.invalid">Add Note</button>
+  </mat-dialog-actions>
+</form>

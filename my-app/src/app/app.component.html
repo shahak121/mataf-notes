@@ -1,0 +1,15 @@
+<div class="app-container">
+  <div class="sidebar" [class.closed]="isSidebarClosed">
+    <button mat-button class="toggle-button" (click)="toggleSidebar()">&#9776;</button>
+    <button mat-button routerLink="/notes">Notes</button>
+    <button mat-button routerLink="/users">Users</button>
+    <div class="spacer"></div>
+    <button mat-button (click)="openEditorModeDialog()">Editor Mode</button>
+    <button mat-button *ngIf="isEditorMode" (click)="closeEditorMode()">Exit Editor Mode</button>
+    <button mat-button>About</button>
+    <div class="logo">Logo</div>
+  </div>
+  <div class="content" [class.sidebar-closed]="isSidebarClosed">
+    <router-outlet></router-outlet>
+  </div>
+</div>

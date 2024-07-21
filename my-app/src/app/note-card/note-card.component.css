@@ -1,0 +1,33 @@
+.note-card {
+  background-image: url('/my-app/src/assets/images/sticky-note.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
+.add-note-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f0e68c; /* Light wood color */
+  border: none;
+  cursor: pointer;
+  background-image: url('/my-app/src/assets/images/plus-sign.png');
+  background-size: 60%; /* Adjust size as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

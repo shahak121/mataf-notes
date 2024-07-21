@@ -1,0 +1,29 @@
+<h2 class="dialog-title">Edit User</h2>
+<form (ngSubmit)="updateUser()" #userForm="ngForm">
+  <mat-dialog-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="name" name="name" required>
+      <mat-error *ngIf="userForm.controls['name']?.invalid && userForm.controls['name']?.touched">
+        Name is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" name="email" disabled>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Phone</mat-label>
+      <input matInput [(ngModel)]="phone" name="phone" required>
+      <mat-error *ngIf="userForm.controls['phone']?.invalid && userForm.controls['phone']?.touched">
+        Phone is required.
+      </mat-error>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="button" (click)="closeDialog()">Cancel</button>
+    <button mat-button type="submit" [disabled]="userForm.invalid">Update</button>
+  </mat-dialog-actions>
+</form>

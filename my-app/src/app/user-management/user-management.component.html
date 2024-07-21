@@ -1,0 +1,12 @@
+<div class="user-list">
+  <div *ngFor="let user of users" class="user-card">
+    <p>{{ user.name }}</p>
+    <p>{{ user.email }}</p>
+    <p>{{ user.phone }}</p>
+    <div *ngIf="isEditorMode">
+      <button mat-button (click)="editUser(user)">Edit</button>
+      <button mat-button (click)="deleteUser(user.id)">Delete</button>
+    </div>
+  </div>
+</div>
+<button *ngIf="isEditorMode" class="add-user-button" (click)="openAddUserDialog()">Add User</button>

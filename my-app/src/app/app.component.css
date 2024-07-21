@@ -1,0 +1,28 @@
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  height: 100vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s;
+}
+
+.sidebar.closed {
+  width: 50px;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  transition: margin-left 0.3s;
+  margin-left: 200px; /* Default margin when sidebar is open */
+}
+
+.content.sidebar-closed {
+  margin-left: 50px; /* Reduced margin when sidebar is closed */
+}

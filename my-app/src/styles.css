@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f6d0e8;
+  color: #000000; /* Ensure text is black */
+}
+
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  padding: 20px;
+}
+
+.note-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Center the note cards */
+}
+
+.note-card {
+  background-color: #f5f5dc;
+  color: #020101; /* Ensure text inside cards is black */
+  margin-top: auto;
+  text-align: center;
+  background-image: url('/my-app/src/assets/images/sticky-note.png');
+  background-size: cover;
+  padding: 10px; /* Reduced padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 14px; /* Smaller font size */
+  height: 200px; /* Reduced height */
+}
+
+.add-note-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 60px;
+  height: 60px;
+  background-color: #f0e68c; /* Light wood color */
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  background-image: url('/my-app/src/assets/images/plus-sign.png');
+  background-size: 30px; /* Adjust size as needed */
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #000000; /* Add border for better visibility */
+}
+
+.add-note-button:hover {
+  background-color: #e0c85c; /* Slightly darker color on hover */
+}

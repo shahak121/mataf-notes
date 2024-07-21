@@ -1,0 +1,32 @@
+<div mat-dialog-content>
+  <h2 mat-dialog-title>Edit Note</h2>
+  
+  <form #editNoteForm="ngForm" (ngSubmit)="updateNote()">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Note Title</mat-label>
+      <input matInput [(ngModel)]="noteTitle" name="noteTitle" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Note Contents</mat-label>
+      <textarea matInput [(ngModel)]="noteContents" name="noteContents" required></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>User Name</mat-label>
+      <input matInput [(ngModel)]="username" name="username" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Duration (days)</mat-label>
+      <input matInput type="number" [(ngModel)]="duration" name="duration" required min="1">
+    </mat-form-field>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+    <div mat-dialog-actions align="end">
+      <button mat-button type="button" (click)="closeDialog()">Cancel</button>
+      <button mat-button color="primary" type="submit" [disabled]="editNoteForm.invalid">Save</button>
+    </div>
+  </form>
+</div>
